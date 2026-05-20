@@ -1,98 +1,29 @@
 import React, { useState } from 'react';
 import '../styles/Navigation.css';
-import DotGrid from './DotGrid';
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
-  const openContactModal = (e) => {
+  const scrollToSection = (e, sectionId) => {
     e.preventDefault();
-    setIsContactModalOpen(true);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <>
-      <div style={{
-        background: '#f0f0f0',
-        padding: '12px',
-        textAlign: 'center',
-        fontSize: '14px',
-        color: '#666'
-      }}>
-        🔧 This is a placeholder site. Full platform coming soon.
-      </div>
-      <nav className="navbar" style={{ background: 'transparent', position: 'relative' }}>
-        {/* Background Aurora */}
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none', overflow: 'hidden' }}>
-          <DotGrid
-            dotSize={8}
-            gap={20}
-            baseColor="#e0e0e0"
-            activeColor="#1a1a1a"
-            proximity={120}
-            shockRadius={250}
-            shockStrength={5}
-            resistance={750}
-            returnDuration={1.5}
-          />
+      <nav className="navbar-minimal">
+        <div className="nav-left">
+          {/* <a href="/" className="nav-link">+1</a> */}
+          {/* <a href="/" className="nav-link">PROJECTS</a> */}
         </div>
-        <div className="navbar-container">
-          {/* Logo */}
-          <div className="navbar-logo">
-            <a href="/">STITCH.IN</a>
-          </div>
-
-          {/* Hamburger Menu */}
-          <div
-            className="hamburger"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          {/* Nav Links */}
-          <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-            <li className="nav-item">
-              <a href="/" className="nav-link">MEN</a>
-            </li>
-            <li className="nav-item">
-              <a href="/shop" className="nav-link">NEW ARRIVALS</a>
-            </li>
-            <li className="nav-item">
-              <a href="#" onClick={openContactModal} className="nav-link">CONTACT US</a>
-            </li>
-          </ul>
-
-          {/* Right Side Icons */}
-          <div className="navbar-right">
-            <button className="navbar-icon" aria-label="Search">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-            <button className="navbar-icon" aria-label="Wishlist">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            </button>
-            <button className="navbar-icon" aria-label="Cart">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-              </svg>
-            </button>
-            <button className="navbar-icon" aria-label="Profile">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-            </button>
-          </div>
+        <div className="nav-right">
+          <a href="#hero" onClick={(e) => scrollToSection(e, 'hero')} className="nav-link">HOME</a>
+          <a href="#launching-soon" onClick={(e) => scrollToSection(e, 'launching-soon')} className="nav-link">SHOP</a>
+          {/* <a href="/" className="nav-link">NEW ARRIVALS ▼</a> */}
+          <button className="nav-link" onClick={() => setIsContactModalOpen(true)}>CONTACT US</button>
         </div>
       </nav>
 

@@ -1,68 +1,55 @@
 import React from 'react';
-import { instagramFeed } from '../data/mockData';
 import '../styles/Home.css';
+import modelImg from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.07 AM.jpeg';
 
 const Home = () => {
   return (
-    <section className="home-page">
-      {/* Instagram Feed Section */}
-      <div className="instagram-section">
-        <div className="instagram-container">
-          <h2>Follow us @stitch.in__</h2>
-          <p>Join our community and see how our customers style STITCH.IN</p>
+    <div className="home-wrapper">
+      <section id="hero" className="hero-minimal">
+        {/* Grey background block for the image */}
+        <div className="image-bg-block"></div>
 
-          <div className="instagram-grid">
-            {instagramFeed.map((post) => (
-              <div key={post.id} className="instagram-card">
-                <img src={post.image} alt="Instagram post" />
-                <div className="instagram-overlay">
-                  <div className="instagram-stats">
-                    <span>❤️ {post.likes}</span>
-                    <span>💬 {post.comments}</span>
-                  </div>
-                </div>
+        <div className="hero-content">
+          <div className="hero-left">
+            <div className="tech-text-container">
+              <div className="tech-text-block">
+                <h4>ELEGANCE IN EVERY STITCH</h4>
+                <div className="tech-line"></div>
+                <p>We believe great shirts are more than fabric and thread. They're an extension of who you are—a quiet confidence worn close to the skin. </p>
+                <p>Each collection is built on precision, passion, and purpose.</p>
+                <p>KEEP UNSEEN.</p>
               </div>
-            ))}
+              <div className="tech-text-block">
+                <div className="tech-line" style={{ marginTop: '1.2rem' }}></div>
+              </div>
+            </div>
+
+            <h1 className="hero-title">stitch.</h1>
+            <div className="hero-bottom-left">
+              <div className="vertical-text">001</div>
+              <div className="arrow-box">→</div>
+            </div>
           </div>
 
-          <a
-            href="https://www.instagram.com/stitch.in__"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="view-instagram-btn"
-            style={{ textDecoration: 'none', display: 'inline-block' }}
-          >
-            VIEW ON INSTAGRAM
-          </a>
-        </div>
-      </div>
+          <div className="hero-right">
+            <div className="model-image-container">
+              <img src={modelImg} alt="Stitch Model" className="model-image" />
+              <div className="vertical-label">
+                <strong>STITCH OFFICIAL</strong>
 
-      {/* Trust Section */}
-      <div className="trust-section">
-        <div className="trust-container">
-          <div className="trust-item">
-            <div className="trust-icon">✓</div>
-            <h3>Premium Quality</h3>
-            <p>Crafted with the finest materials and attention to detail</p>
-          </div>
-          <div className="trust-item">
-            <div className="trust-icon">↩</div>
-            <h3>Easy Returns</h3>
-            <p>30-day return policy for your peace of mind</p>
-          </div>
-          <div className="trust-item">
-            <div className="trust-icon">🚚</div>
-            <h3>Free Shipping</h3>
-            <p>Free shipping on orders over ₹1000</p>
-          </div>
-          <div className="trust-item">
-            <div className="trust-icon">💬</div>
-            <h3>Support</h3>
-            <p>Dedicated customer service team ready to help</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="launching-soon" className="launching-soon">
+        <div className="launching-content">
+          <h2>LAUNCHING SOON</h2>
+          <p>A NEW STANDARD IN EVERYDAY ELEGANCE.</p>
+        </div>
+      </section>
+    </div>
   );
 };
 
