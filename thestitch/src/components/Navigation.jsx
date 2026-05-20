@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Navigation.css';
+import DotGrid from './DotGrid';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,21 @@ const Navigation = () => {
       }}>
         🔧 This is a placeholder site. Full platform coming soon.
       </div>
-      <nav className="navbar">
+      <nav className="navbar" style={{ background: 'transparent', position: 'relative' }}>
+        {/* Background Aurora */}
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none', overflow: 'hidden' }}>
+          <DotGrid
+            dotSize={8}
+            gap={20}
+            baseColor="#e0e0e0"
+            activeColor="#1a1a1a"
+            proximity={120}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          />
+        </div>
         <div className="navbar-container">
           {/* Logo */}
           <div className="navbar-logo">
