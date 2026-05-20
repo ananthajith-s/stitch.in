@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../styles/Home.css';
+import VariableProximity from '../components/VariableProximity';
 import modelImg from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.07 AM.jpeg';
 
 const Home = () => {
+  const containerRef = useRef(null);
+
   return (
     <div className="home-wrapper">
       <section id="hero" className="hero-minimal">
@@ -10,7 +13,7 @@ const Home = () => {
         <div className="image-bg-block"></div>
 
         <div className="hero-content">
-          <div className="hero-left">
+          <div className="hero-left" ref={containerRef}>
             <div className="tech-text-container">
               <div className="tech-text-block">
                 <h4>ELEGANCE IN EVERY STITCH</h4>
@@ -24,9 +27,19 @@ const Home = () => {
               </div>
             </div>
 
-            <h1 className="hero-title">stitch.</h1>
+            <h1 className="hero-title">
+              <VariableProximity
+                label="stitch."
+                className="variable-proximity-demo"
+                fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                containerRef={containerRef}
+                radius={200}
+                falloff="linear"
+              />
+            </h1>
             <div className="hero-bottom-left">
-              <div className="vertical-text">001</div>
+              <div className="vertical-text"><br></br>001</div>
               <div className="arrow-box">→</div>
             </div>
           </div>
