@@ -21,7 +21,7 @@ const Navigation = () => {
         </div>
         <div className="nav-right">
           <a href="#hero" onClick={(e) => scrollToSection(e, 'hero')} className="nav-link">HOME</a>
-          <a href="#hero" onClick={(e) => scrollToSection(e, 'hero')} className="nav-link">COLLECTIONS</a>
+          <a href="#collection-section" onClick={(e) => scrollToSection(e, 'collection-section')} className="nav-link">COLLECTIONS</a>
           <a href="#launching-soon" onClick={(e) => scrollToSection(e, 'launching-soon')} className="nav-link">SHOP</a>
           {/* <a href="/" className="nav-link">NEW ARRIVALS ▼</a> */}
           <button className="nav-link" onClick={() => setIsContactModalOpen(true)}>CONTACT US</button>

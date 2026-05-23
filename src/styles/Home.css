@@ -15,26 +15,46 @@
   overflow: hidden;
 }
 
+#collection-section {
+  /* Tells the browser to leave a 100px cushion at the top when scrolled into view */
+  scroll-margin-top: 50px; 
+}
+
+.half-collection img {
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+  object-position: 90% 70%;
+
+}
+
 .collection-header {
   text-align: center;
-  padding: 5px 0 20px 0; 
-  margin-top: -10px;
+  padding: 20px 0 20px 0; 
+  margin-top: -70px;
 }
 
 .collection-header h1  {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 600;
   letter-spacing: 6px;
   color: #111;
   margin: 0;
+
+  margin-bottom: -10px;
 }
 
 .collection-header p  {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 6px;
   color: #111;
   margin: 0;
+
+  margin-top: 1rem; /* Adjust this value (e.g., 1rem, 2rem, 20px) to get the exact look you want */
+  margin-bottom: -0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .image-bg-block {
@@ -150,14 +170,14 @@
 .arrow-box {
   width: 45px;
   height: 45px;
-  background: #000000;
+  background: #222121;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   font-weight: 300;
-  transform: translate(500px, 55px); 
+  transform: translate(500px, 120px); 
 }
 
 .hero-right {
@@ -197,7 +217,7 @@
 }
 
 .launching-soon {
-  background: #000000;
+  background: #0e0e0e;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -237,16 +257,62 @@
 }
 
 /* Collection section styles */
-.collection-section { background: #f1efe9; padding: 4rem 0; }
+.collection-section { background: #ffffff; padding: 4rem 0; }
 .collection-inner { width: min(1400px, 96%); margin: 0 auto; display: grid; gap: 2rem; }
-.hero-collection img { width: 100%; height: auto; display: block; border: 12px solid #efe9e4; }
-.collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.collection-grid img { width: 100%; height: auto; display: block; border: 12px solid #efe9e4; }
-.split-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.split-left img, .split-right img { width: 100%; height: auto; display: block; }
-.section-title { text-align: center; padding: 1.2rem 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #111; font-weight: 700; letter-spacing: 6px; }
-.thumbs { display:flex; gap:1rem; justify-content:center; padding:2rem 0; }
-.thumbs img { width:180px; height:180px; object-fit:cover; border:10px solid #efe9e4; }
+.hero-collection img { width: 100%; height: auto; display: block; }
+
+.collection-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+}
+
+.collection-grid img { 
+  width: 100%; 
+  
+  /* 1. Set a fixed height so both images are exactly identical */
+  height: 1400px; /* Adjust this value (e.g., 450px, 600px) to match your design */
+  
+  /* 2. Prevents distortion by cropping the image to fit the container */
+  object-fit: cover; 
+  
+  /* 3. Optional: Centers the crop area (adjust if you need to focus on tops/bottoms) */
+  /* object-position: center; 
+  
+  display: block; 
+  border: 12px solid #efe9e4;  */
+  
+  /* 4. Ensures the 12px border doesn't add extra height variations */
+  box-sizing: border-box; 
+}
+
+.split-row { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+}
+
+.split-row img { 
+  width: 100%; 
+  
+  /* 1. Set a fixed height so both images are exactly identical */
+  height: 1400px; /* Adjust this value (e.g., 450px, 600px) to match your design */
+  
+  /* 2. Prevents distortion by cropping the image to fit the container */
+  object-fit: cover; 
+  
+  /* 3. Optional: Centers the crop area (adjust if you need to focus on tops/bottoms) */
+  /* object-position: center; 
+  
+  display: block; 
+  border: 12px solid #efe9e4;  */
+  
+  /* 4. Ensures the 12px border doesn't add extra height variations */
+  box-sizing: border-box; 
+}
+.section-title { text-align: center; padding: 1.2rem 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #111; font-weight: 700; letter-spacing: 6px; font-size: 30px;}
+.thumbs { display:flex; gap:2rem; justify-content:center; padding:2rem 0; }
+.thumbs img { width:400px; height:400px; object-fit:cover; }
 
 @media (max-width: 768px) {
   .collection-grid, .split-row { grid-template-columns: 1fr; }

@@ -2,14 +2,15 @@ import React, { useRef } from 'react';
 import '../styles/Home.css';
 import VariableProximity from '../components/VariableProximity';
 import modelImg from '../assets/images/Firefly-3.png';
-import fullImg from '../assets/images/AEDEAFEA-F917-45A5-8DCD-2D1F706EFC4E_1_201_a.jpeg';
-import pairLeft from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.19 AM.jpeg';
-import pairRight from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.20 AM.jpeg';
-import splitLeft from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.22 AM.jpeg';
-import splitRight from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.07 AM.jpeg';
-import thumb1 from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.02 AM.jpeg';
-import thumb2 from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.04 AM.jpeg';
-import thumb3 from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.06 AM.jpeg';
+import fullImg from '../assets/images/First pic.jpeg';
+import HalfImg from '../assets/images/half.jpeg';
+import pairLeft from '../assets/images/Firefly-6.jpg';
+import pairRight from '../assets/images/Firefly-7.jpg';
+import splitLeft from '../assets/images/Firefly-9.jpg';
+import splitRight from '../assets/images/splitleft.jpg';
+import thumb1 from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.23 AM.jpeg';
+import thumb3 from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.20 AM.jpeg';
+import thumb2 from '../assets/images/WhatsApp Image 2026-05-20 at 9.32.19 AM.jpeg';
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -78,11 +79,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="collection-section">
+      <section className="collection-section" id ="collection-section">
 
         <div className="collection-header">
             <h1 className="brand-logo">STITCH.IN</h1>
-            <p className="collection-subtitle">new collection</p>
+            <p className="collection-subtitle">NEW COLLECTION</p>
         </div>
 
         <div className="collection-inner">
@@ -93,6 +94,10 @@ const Home = () => {
           <div className="collection-grid">
             <div className="grid-item"><img src={pairLeft} alt="Collection left" /></div>
             <div className="grid-item"><img src={pairRight} alt="Collection right" /></div>
+          </div>
+
+          <div className="half-collection">
+            <img src={HalfImg} alt="Collection-half" className="w-full h-[750px] object-cover object-[90%_70%]" />
           </div>
 
           <div className="split-row">
@@ -112,7 +117,7 @@ const Home = () => {
 
       <section id="launching-soon" className="launching-soon">
         <div className="launching-content">
-          <h1>STITCH OFFICIAL.IN</h1>
+          <h1>stitchofficial.in</h1>
           <h2>LAUNCHING SOON</h2>
           <p>A NEW STANDARD IN EVERYDAY ELEGANCE.</p>
         </div>
