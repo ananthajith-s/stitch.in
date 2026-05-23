@@ -69,7 +69,7 @@ const Home = () => {
 
           <div className="hero-right">
             <div className="model-image-container">
-              <img src={modelImg} alt="Stitch Model" className="model-image" style={{ width: '500px', height: '800px' }}/>
+              <img src={modelImg} alt="Stitch Model" className="model-image" />
               <div className="vertical-label">
                 <strong>STITCH OFFICIAL</strong>
 

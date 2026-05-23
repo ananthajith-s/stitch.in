@@ -17,7 +17,7 @@
 
 #collection-section {
   /* Tells the browser to leave a 100px cushion at the top when scrolled into view */
-  scroll-margin-top: 50px; 
+  scroll-margin-top: 50px;
 }
 
 .half-collection img {
@@ -30,11 +30,11 @@
 
 .collection-header {
   text-align: center;
-  padding: 20px 0 20px 0; 
+  padding: 20px 0 20px 0;
   margin-top: -70px;
 }
 
-.collection-header h1  {
+.collection-header h1 {
   font-size: 4rem;
   font-weight: 600;
   letter-spacing: 6px;
@@ -44,14 +44,15 @@
   margin-bottom: -10px;
 }
 
-.collection-header p  {
+.collection-header p {
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 6px;
   color: #111;
   margin: 0;
 
-  margin-top: 1rem; /* Adjust this value (e.g., 1rem, 2rem, 20px) to get the exact look you want */
+  margin-top: 1rem;
+  /* Adjust this value (e.g., 1rem, 2rem, 20px) to get the exact look you want */
   margin-bottom: -0px;
   margin-left: 0;
   margin-right: 0;
@@ -147,8 +148,14 @@
   transform: translateY(70px);
 }
 
-.stitch-part { color: #111; }
-.in-part { color: #fff; }
+.stitch-part {
+  color: #111;
+}
+
+.in-part {
+  color: #fff;
+}
+
 .hero-bottom-left {
   position: relative;
   margin-top: 3rem;
@@ -177,7 +184,7 @@
   justify-content: center;
   font-size: 20px;
   font-weight: 300;
-  transform: translate(500px, 120px); 
+  transform: translate(500px, 120px);
 }
 
 .hero-right {
@@ -191,12 +198,16 @@
 
 .model-image-container {
   height: 75vh;
+  width: 500px;
+  max-width: 45vw;
   position: sticky;
-  margin-right: -3rem; /* extend slightly to the right */
+  margin-right: -3rem;
+  /* extend slightly to the right */
   margin-bottom: -1rem;
 }
 
 .model-image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%) contrast(1.1);
@@ -226,7 +237,7 @@
   text-align: center;
 }
 
-.launching-content h1{
+.launching-content h1 {
   font-size: 2vw;
 }
 
@@ -250,92 +261,278 @@
   .hero-minimal {
     padding: 0 2rem;
   }
-  .hero-title { font-size: 18vw; }
-  .tech-text-container { display: none; }
-  .model-image-container { margin-right: -2rem; height: 65vh; }
-  .image-bg-block { width: 80%; }
+
+  .hero-title {
+    font-size: 11vw;
+    margin: 0 0 0 3rem;
+  }
+
+  .tech-text-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tech-text-block {
+    margin-top: -60px;
+  }
+
+  .tech-text-block h4 {
+    font-size: 9px;
+    margin-left: 30px;
+  }
+
+  .tech-line {
+    margin-left: 30px;
+    width: 85%;
+  }
+
+  .tech-text-block p {
+    font-size: 7.5px;
+    margin-left: 30px;
+  }
+
+  .model-image-container {
+    margin-right: -2rem;
+    height: 65vh;
+  }
+
+  .image-bg-block {
+    width: 80%;
+  }
 }
 
 /* Collection section styles */
-.collection-section { background: #ffffff; padding: 4rem 0; }
-.collection-inner { width: min(1400px, 96%); margin: 0 auto; display: grid; gap: 2rem; }
-.hero-collection img { width: 100%; height: auto; display: block; }
-
-.collection-grid { 
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: 2rem; 
+.collection-section {
+  background: #ffffff;
+  padding: 4rem 0;
 }
 
-.collection-grid img { 
-  width: 100%; 
-  
+.collection-inner {
+  width: min(1400px, 96%);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.hero-collection img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.collection-grid img {
+  width: 100%;
+
   /* 1. Set a fixed height so both images are exactly identical */
-  height: 1400px; /* Adjust this value (e.g., 450px, 600px) to match your design */
-  
+  height: 1400px;
+  /* Adjust this value (e.g., 450px, 600px) to match your design */
+
   /* 2. Prevents distortion by cropping the image to fit the container */
-  object-fit: cover; 
-  
+  object-fit: cover;
+
   /* 3. Optional: Centers the crop area (adjust if you need to focus on tops/bottoms) */
   /* object-position: center; 
   
   display: block; 
   border: 12px solid #efe9e4;  */
-  
+
   /* 4. Ensures the 12px border doesn't add extra height variations */
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-.split-row { 
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: 2rem; 
+.split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
-.split-row img { 
-  width: 100%; 
-  
+.split-row img {
+  width: 100%;
+
   /* 1. Set a fixed height so both images are exactly identical */
-  height: 1400px; /* Adjust this value (e.g., 450px, 600px) to match your design */
-  
+  height: 1400px;
+  /* Adjust this value (e.g., 450px, 600px) to match your design */
+
   /* 2. Prevents distortion by cropping the image to fit the container */
-  object-fit: cover; 
-  
+  object-fit: cover;
+
   /* 3. Optional: Centers the crop area (adjust if you need to focus on tops/bottoms) */
   /* object-position: center; 
   
   display: block; 
   border: 12px solid #efe9e4;  */
-  
+
   /* 4. Ensures the 12px border doesn't add extra height variations */
-  box-sizing: border-box; 
-}
-.section-title { text-align: center; padding: 1.2rem 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #111; font-weight: 700; letter-spacing: 6px; font-size: 30px;}
-.thumbs { display:flex; gap:2rem; justify-content:center; padding:2rem 0; }
-.thumbs img { width:400px; height:400px; object-fit:cover; }
-
-@media (max-width: 768px) {
-  .collection-grid, .split-row { grid-template-columns: 1fr; }
-  .thumbs img { width: 30vw; height: 30vw; }
+  box-sizing: border-box;
 }
 
+.section-title {
+  text-align: center;
+  padding: 1.2rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 6px;
+  font-size: 30px;
+}
+
+.thumbs {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.thumbs img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
+
+  /* Prevent column collapsing so that collection-grid and split-row remain 2-column layouts just like desktop */
+  .collection-grid,
+  .split-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    /* slightly tighter gap on mobile */
   }
-  .hero-left {
-    padding-top: 15vh;
-    align-items: center;
+
+  /* Set fluid aspect ratios for images to match their desktop proportions */
+  .collection-grid img,
+  .split-row img {
+    height: auto;
+    aspect-ratio: 1 / 2;
+  }
+
+  .half-collection img {
+    height: auto;
+    aspect-ratio: 1400 / 750;
+  }
+
+  /* Retain 3 thumbs side by side but with responsive width, height, and gap */
+  .thumbs {
+    gap: 1.5vw;
+  }
+
+  .thumbs img {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-minimal {
+    padding: 0rem 1rem;
+    height: 70vh;
+    min-height: 480px;
+  }
+
+  .image-bg-block {
     width: 100%;
+    clip-path: polygon(55% 0%, 100% 0%, 100% 100%, 38% 100%);
   }
-  .hero-title { font-size: 25vw; margin: 0; }
-  .hero-right { width: 100%; align-items: flex-end; justify-content: center; }
-  .model-image-container { height: 50vh; margin-right: 0; }
-  .vertical-label { right: 1rem; color: #fff; mix-blend-mode: difference; }
+
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-left {
+    padding-top: 14vh;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .tech-text-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .tech-text-block {
+    margin-top: 0;
+  }
+
+  .tech-text-block h4 {
+    font-size: 6px;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .tech-line {
+    margin-left: 10px;
+    width: 80%;
+    margin-bottom: 0.25rem;
+  }
+
+  .tech-text-block p {
+    font-size: 5px;
+    margin-left: 10px;
+    line-height: 1.3;
+  }
+
+  .hero-title {
+    font-size: 18vw;
+    margin: -0.5rem 0 0 0.5rem;
+  }
+
+  .hero-title-text {
+    transform: translateY(0);
+  }
+
+  .hero-right {
+    flex: 0.8;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .model-image-container {
+    height: 50vh;
+    width: 65vw;
+    /* margin-right: -1rem; */
+    margin-bottom: -1rem;
+  }
+
+  .model-image {
+    object-position: 35% center;
+  }
+
+  .vertical-label {
+    top: 15%;
+    right: 0.5rem;
+    font-size: 7px;
+    margin-top: 20px;
+    color: #fff;
+    mix-blend-mode: difference;
+  }
+
   .hero-bottom-left {
-    bottom: 2rem;
-    left: 2rem;
-    gap: 2rem;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
   }
-  .vertical-text { font-size: 12vw; }
+
+  .vertical-text {
+    font-size: 6vw;
+  }
+
+  .arrow-box {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    transform: translate(min(220px, 35vw), 50px);
+  }
 }
