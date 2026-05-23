@@ -15,6 +15,28 @@
   overflow: hidden;
 }
 
+.collection-header {
+  text-align: center;
+  padding: 5px 0 20px 0; 
+  margin-top: -10px;
+}
+
+.collection-header h1  {
+  font-size: 6rem;
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: #111;
+  margin: 0;
+}
+
+.collection-header p  {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #111;
+  margin: 0;
+}
+
 .image-bg-block {
   position: absolute;
   bottom: 0;
@@ -212,6 +234,23 @@
   .tech-text-container { display: none; }
   .model-image-container { margin-right: -2rem; height: 65vh; }
   .image-bg-block { width: 80%; }
+}
+
+/* Collection section styles */
+.collection-section { background: #f1efe9; padding: 4rem 0; }
+.collection-inner { width: min(1400px, 96%); margin: 0 auto; display: grid; gap: 2rem; }
+.hero-collection img { width: 100%; height: auto; display: block; border: 12px solid #efe9e4; }
+.collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.collection-grid img { width: 100%; height: auto; display: block; border: 12px solid #efe9e4; }
+.split-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.split-left img, .split-right img { width: 100%; height: auto; display: block; }
+.section-title { text-align: center; padding: 1.2rem 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #111; font-weight: 700; letter-spacing: 6px; }
+.thumbs { display:flex; gap:1rem; justify-content:center; padding:2rem 0; }
+.thumbs img { width:180px; height:180px; object-fit:cover; border:10px solid #efe9e4; }
+
+@media (max-width: 768px) {
+  .collection-grid, .split-row { grid-template-columns: 1fr; }
+  .thumbs img { width: 30vw; height: 30vw; }
 }
 
 @media (max-width: 768px) {
