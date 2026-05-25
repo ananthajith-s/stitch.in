@@ -47,9 +47,9 @@
 }
 
 .contact-modal {
-  background: #fff;
+  background: #ffffff;
+  border-radius: 15px;
   padding: 3rem;
-  border-radius: 0;
   position: relative;
   width: 90%;
   max-width: 500px;
@@ -128,4 +128,60 @@
   .nav-link {
     font-size: 9px;
   }
+
+  .contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+
+.contact-modal {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 3rem;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal-btn:hover {
+  color: #1a1a1a;
+}
+
+.contact-modal h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.contact-modal-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 }

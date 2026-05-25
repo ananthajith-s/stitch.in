@@ -5,6 +5,16 @@
   overflow-x: hidden;
 }
 
+.mobile-only {
+  display: none;
+}
+
+
+.hero-title-text {
+  display: flex; /* or block, depending on your layout */
+}
+
+
 .hero-minimal {
   position: relative;
   width: 100%;
@@ -18,7 +28,18 @@
 #collection-section {
   /* Tells the browser to leave a 100px cushion at the top when scrolled into view */
   scroll-margin-top: 50px;
-}
+  background: #e4e4e4;
+  /* background-image: url('/Users/muhammedhadhikp/Downloads/stitch.in-main/thestitch/src/assets/images/Collection bg.jpg'); 
+  
+  /* Centers the image perfectly horizontally and vertically */
+  /* background-position: right 50% top 70%; */
+
+  
+  /* Forces the image to scale proportionally to cover the entire section width/height */
+  /* background-size: auto;  */
+  
+  /* Prevents the image from repeating if the section is taller than the image asset */
+} 
 
 .half-collection img {
   width: 100%;
@@ -35,12 +56,11 @@
 }
 
 .collection-header h1 {
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 5rem;
+  font-weight: 800;
   letter-spacing: 6px;
   color: #111;
   margin: 0;
-
   margin-bottom: -10px;
 }
 
@@ -200,7 +220,7 @@
   height: 75vh;
   width: 500px;
   max-width: 45vw;
-  position: sticky;
+  position: relative;
   margin-right: -3rem;
   /* extend slightly to the right */
   margin-bottom: -1rem;
@@ -230,7 +250,7 @@
 .launching-soon {
   background: #0e0e0e;
   color: #fff;
-  height: 100vh;
+  height: 82vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -254,6 +274,143 @@
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #888;
+}
+
+/* Add this CSS to your stylesheet (e.g., home.css or your global styles) */
+
+/* Social Contact Bar */
+.social-contact-bar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 0px;
+  padding: 22px 20px;
+  background: #0e0e0e;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-8px);
+}
+
+/* Contact Icon */
+.contact-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: #000000;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+
+
+.contact-icon:hover {
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: #555555;
+  transform: scale(1.1);
+}
+
+.contact-icon svg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover svg {
+  transform: scale(1.15);
+}
+
+/* Contact Text - Main Label */
+.contact-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c1c1c1;
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-family: 'avantgarde', sans-serif;
+}
+
+/* Contact Description - Subtitle */
+.contact-description {
+  font-size: 12px;
+  color: #777777;
+  margin: 0;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  max-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-contact-bar {
+    gap: 100px;
+    padding: 10px 15px;
+    margin-top: 0px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .contact-text {
+    display: none;
+  }
+
+  .contact-description {
+    font-size: 11px;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-contact-bar {
+    gap: 60px;
+    padding: 20px 10px;
+    margin-top: 0px;
+  }
+
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .contact-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contact-text {
+    font-size: 13px;
+  }
+
+  .contact-description {
+    font-size: 10px;
+    max-width: 110px;
+  }
 }
 
 /* Responsive Overrides */
@@ -292,13 +449,9 @@
     margin-left: 30px;
   }
 
-  .model-image-container {
-    margin-right: -2rem;
-    height: 65vh;
-  }
-
   .image-bg-block {
     width: 80%;
+    clip-path: polygon(38% 0%, 100% 0%, 100% 100%, 38% 100%);
   }
 }
 
@@ -307,6 +460,16 @@
   background: #ffffff;
   padding: 4rem 0;
 }
+
+.collection-header h1{
+  font-size: 55px;
+  padding-bottom: 0.1px;
+}
+.collection-header p{
+  font-size: 10px;
+  padding-bottom: 0.1px;
+}
+
 
 .collection-inner {
   width: min(1400px, 96%);
@@ -422,27 +585,37 @@
   /* Retain 3 thumbs side by side but with responsive width, height, and gap */
   .thumbs {
     gap: 1.5vw;
+    padding: 0.2rem 0rem;
   }
 
   .thumbs img {
     width: 30vw;
     height: 30vw;
   }
+
+  .section-title {
+    font-size: 3vw;
+    border-top: 1px solid #ddd;
+    padding: 0.6rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero-minimal {
     padding: 0rem 1rem;
-    height: 70vh;
+    height: 100vh;
     min-height: 480px;
+    overflow: visible;
   }
 
   .image-bg-block {
-    width: 100%;
-    clip-path: polygon(55% 0%, 100% 0%, 100% 100%, 38% 100%);
+    height: 100%;
+    width: 80%;
+    /* clip-path: polygon(50% 100%, 100% 0%, 100% 100%, 0% 100%); */
   }
 
   .hero-content {
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -485,31 +658,91 @@
     line-height: 1.3;
   }
 
-  .hero-title {
+  /* .hero-title {
     font-size: 18vw;
-    margin: -0.5rem 0 0 0.5rem;
-  }
+    margin: -0.5rem 0 0 1.3rem;
+    
+  } */
+
+.collection-header h1{
+  font-size: 55px;
+  padding-bottom: 0.1px;
+}
 
   .hero-title-text {
-    transform: translateY(0);
+    /* transform: translateY(0);
+    font-weight: bold; */
+    display: none
   }
 
+  .mobile-only{
+     /* Shows the static, lightweight text */
+    display: inline-block; /* Shows the static, lightweight text */
+    font-weight: 500;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    font-size: 14vw;
+    font-weight: 800;
+    color: #111;
+    margin: 0 0 0 -2.7rem;
+    line-height: 0.8;
+    letter-spacing: -2px;
+    white-space: nowrap;
+  }
+
+  .stitch-part {
+    letter-spacing: 5px;
+  }
+
+
+
   .hero-right {
-    flex: 0.8;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 0;
+    z-index: 2;
+    padding-bottom: 0;
+    margin-top: auto;
+    height: auto;
   }
 
   .model-image-container {
-    height: 50vh;
-    width: 65vw;
-    /* margin-right: -1rem; */
-    margin-bottom: -1rem;
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
   }
 
   .model-image {
-    object-position: 35% center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) contrast(1.1);
   }
+
+@media (max-width: 480px) {
+  .collection-header h1{
+    font-size: 55px;
+    padding-bottom: 0.1px;
+  }
+}
 
   .vertical-label {
     top: 15%;
@@ -533,6 +766,25 @@
     width: 30px;
     height: 30px;
     font-size: 14px;
-    transform: translate(min(220px, 35vw), 50px);
+    transform: translate(-5vw,5vw);
+  }
+  @media (max-width: 768px) {
+    .launching-soon {
+       height: 85vh;
+      }
+    .launching-content h1 {
+  font-size: 5vw;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.launching-content h2 {
+  font-size: 15vw;
+}
+
+.launching-content p {
+  font-size: 2vw;
+}
+
   }
 }
