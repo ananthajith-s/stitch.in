@@ -36,7 +36,11 @@ const Navigation = () => {
             <h2>STITCH.IN</h2>
             <div className="contact-modal-content">
               <p><strong>Email: </strong>stitchofficial.in@gmail.com</p>
-              <p><strong>Phone: </strong> +91 73561 29916  | +91 95627 53123</p>
+              {/* <p><strong>Phone: </strong> +91 73561 29916 | +91 95627 53123</p> */}
+              <p><strong>Phone: </strong> 
+                 <span>+91 73561 29916 |</span>
+                <span className="phone-break">+91 95627 53123</span>
+              </p>
               <p><strong>Address: </strong> Ground Floor, Space Mall, Calicut, India 673004</p>
             </div>
           </div>

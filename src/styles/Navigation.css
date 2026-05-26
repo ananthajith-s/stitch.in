@@ -93,6 +93,10 @@
   color: #1a1a1a;
 }
 
+/* .phone-break {
+  display: none;
+} */
+
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -183,5 +187,10 @@
   margin-bottom: 1rem;
   line-height: 1.6;
 }
+
+  .phone-break {
+    display: block;
+    margin-top: 8px;
+  }
 
 }
