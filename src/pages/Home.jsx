@@ -107,10 +107,10 @@ const Home = () => {
             <img src={HalfImg} alt="Collection-half" className="w-full h-[750px] object-cover object-[90%_70%]" />
           </div>
 
-          <div className="split-row">
+          {/* <div className="split-row">
             <div className="split-left"><img src={splitLeft} alt="Split left" /></div>
             <div className="split-right"><img src={splitRight} alt="Split right" /></div>
-          </div>
+          </div> */}
 
           <div className="section-title"><span>THE CHAIN COLLAR SHIRT</span></div>
 
